@@ -11,6 +11,6 @@ class PessoaController {
 
     function selectAll() {
         $result = $this->model->selectAll();
-        var_dump($result);
+        require('./views/pessoaList.php');
     }
 }
