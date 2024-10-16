@@ -13,4 +13,13 @@ class PessoaController {
         $result = $this->model->selectAll();
         require('./views/pessoaList.php');
     }
+
+    function novaPessoa() {
+        require('./views/pessoaForm.php');
+    }
+
+    function insert($data) {
+        $result = $this->model->insert($data);
+        header('Location: ./pessoa.php');
+    }
 }
