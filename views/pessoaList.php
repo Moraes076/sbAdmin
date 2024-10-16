@@ -46,7 +46,7 @@
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a href="./pessoa.php?action=excluir&id=<?= $linha['id'] ?>" class="btn btn-danger btn-circle">
+                                    <a href="./pessoa.php?action=delete&id=<?= $linha['id'] ?>" class="btn btn-danger btn-circle">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>

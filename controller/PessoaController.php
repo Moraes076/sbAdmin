@@ -22,4 +22,9 @@ class PessoaController {
         $result = $this->model->insert($data);
         header('Location: ./pessoa.php');
     }
+
+    function delete($id) {
+        $result = $this->model->delete($id);
+        header('Location: ./pessoa.php');
+    }
 }

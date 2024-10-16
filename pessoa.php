@@ -20,4 +20,9 @@ switch ($action) {
     case 'insert':
         $controller->insert($_POST);
         break;
+    case 'delete':
+        if (isset($_GET['id'])) {
+            $controller->delete($_GET['id']);
+        }
+        break;
 }
