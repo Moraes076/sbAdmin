@@ -1,3 +1,14 @@
+<?php
+if (isset($_SESSION) == false) {
+    session_start();
+}
+
+if (isset($_SESSION['usuario_id'])) {
+    header('Location: ./index.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -53,7 +64,11 @@
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Entrar
                                         </button>
-                                        <hr>
+                                        
+                                        <?php if (isset($_SESSION['login_error'])): ?>
+                                            <p class="text-danger text-center"><?= $_SESSION['login_error'] ?></p>
+                                        <?php endif; ?>
+
                                     </form>
 
                                     <hr>

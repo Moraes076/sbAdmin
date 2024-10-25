@@ -1,4 +1,10 @@
 <?php
+// Verificar se o Usuário está Logado
+require_once './utils/auth.php';
+checkLogin();
+?>
+
+<?php
 
 require_once './controller/PessoaController.php';
 

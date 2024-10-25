@@ -1,3 +1,9 @@
+<?php
+// Verificar se o Usuário está Logado
+require_once './utils/auth.php';
+checkLogin();
+?>
+
 <?php include  './views/includes/header.php'; ?>
 
                 <!-- Begin Page Content -->

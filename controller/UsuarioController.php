@@ -20,5 +20,10 @@ class UsuarioController {
         }    
 
         header('Location: ./index.php');
+        }
+
+        function logout() {
+            session_destroy();
+            header('Location: ./index.php');
     }
 }
