@@ -26,4 +26,15 @@ class UsuarioController {
             session_destroy();
             header('Location: ./index.php');
     }
+
+    function perfil() {
+        $id = $_SESSION['usuario_id'];
+        $result = $this->model->selectById($id);
+        require('./views/usuario-perfil.php');
+    }
+
+    function upload($img_perfil) {
+        $result = $this->model->updateImage($img_perfil);
+        header('Location: ./index.php?action=perfil');
+    }
 }
